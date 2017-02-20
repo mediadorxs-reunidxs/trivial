@@ -2,7 +2,8 @@
   "name": "trivial",
   "private": true,
   "scripts": {
-    "start": "meteor run"
+    "start": "meteor run",
+    "dist": "meteor build --directory dist/ --server-only"
   },
   "dependencies": {
     "@angular/common": "^2.4.8",
