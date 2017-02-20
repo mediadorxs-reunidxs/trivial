@@ -1,11 +1,13 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { MaterialModule } from '@angular/material';
 
 import { Trivial } from './app.component';
 
 @NgModule({
   imports: [
-    BrowserModule
+    BrowserModule,
+    MaterialModule
   ],
   declarations: [
     Trivial
