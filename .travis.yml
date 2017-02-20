@@ -1,0 +1,27 @@
+language: node_js
+node_js:
+  - '4'
+services:
+  - docker
+cache:
+  directories:
+    - "$HOME/.npm"
+    - node_modules
+    - ".meteor"
+before_install:
+  - curl https://install.meteor.com | /bin/sh
+before_script:
+  - npm run dist
+  - docker build -t $DOCKER_REPO .
+#  - docker-compose up -d
+#  - node_modules/protractor/bin/webdriver-manager update
+#  - node_modules/protractor/bin/webdriver-manager start &
+#script:
+#  - node_modules/protractor/bin/protractor --version
+after_success:
+  - docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
+  - docker tag $DOCKER_REPO "$DOCKER_REPO:$TRAVIS_COMMIT"
+  - docker push "$DOCKER_REPO:$TRAVIS_COMMIT"
+notifications:
+  webhooks:
+    secure: "LAQKA2emQprNrtiPtvXSZY3PczqZt6iL0bpopDlLPZ181A+ocjPnwSwtSmG+oACw0iVWUgj90J8G5l/WdNJV2XHelFmBC2YvFmkvkwagMaAeN/GenO2GBb6e0z8sEgdkE4q5Ee9Rxa0iDfsPHXbWbpTJJlUFlaGPZr1yhM5zFJenEMyxSdr4EqVcZC+MM+VSQ/fuJsBOkyaB5knmhOWlFxe91gZt0VFuW2WV+ZmJSWcliLbpvTXYoVgQBZ7e8CmWvy7b1gFXIm7XCUoVx+SnENirlvma+hGZ0iE6wvGY7rGGHgyEVW7wlGcsqLYu75U6UfXZn/PbQzUx/BJzlvA7TdVBDXoLEBso3+mMbpwOTwNGyMsEfJl+HhIVhJ50uMbk5y2lj8SvRZKuXMBZKm86fjV1pDfTI5cFViIIH9uXtkaC0ihLiHraJLalyBWLawUfBBpNegwv+R/XLWEfzUKjziToV1EElpbcT5r1yFVBioZ4TkVTUVkdC17Tr4ZCvUZwBWwk96Sl+vwHV44Kd7Gyg4a3pPgE0kC4lGOxGcwtQ8PapAcr3vT66VodrH2jkk7VCfEZy7g8kOZzbFe3t3MNMII9uRW/fHiY8J2Y3nhZLrxYwxmpLCmu9I4Ajznm8A7WLRJNP4GgCkeFfVPrbEPjIXVnHu3LtukAcSU8ygdoiiA="
