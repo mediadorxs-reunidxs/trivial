@@ -1,19 +1,19 @@
-import { NgModule, ErrorHandler } from '@angular/core';
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+
 import { Trivial } from './app.component';
 
 @NgModule({
+  imports: [
+    BrowserModule
+  ],
   declarations: [
     Trivial
   ],
   entryComponents: [
     Trivial
-  ]
-  /*
-   * Needs a useFactory property
-  providers: [
-    { provide: ErrorHandler, useFactory: what }
-  ]
-  */
+  ],
+  bootstrap: [ Trivial ]
 })
 
 export class AppModule {}
