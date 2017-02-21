@@ -1,1 +1,40 @@
-Frontpage
+<div class="header">
+  <h1>El regalo colectivo que estábais esperando</h1>
+
+  <h2>Elige el plan perfecto para tu grupo y ¡a jugar!</h2>
+
+</div>
+
+<div class="flex-container products"
+     fxLayout="row"
+     fxLayoutAlign="center center">
+  <md-card *ngFor="let product of products">
+    <md-card-header>
+      <md-card-title>{{ product.title }}</md-card-title>
+      <div md-card-avatar class="example-header-image"></div>
+      <img md-card-image src="assets/img/examples/shiba2.jpg">
+      <md-card-subtitle>{{ product.prize }}€</md-card-subtitle>
+    </md-card-header>
+    <md-divider></md-divider>
+    <md-card-content>
+      <md-list>
+        <md-list-item *ngFor="let feature of features">
+          <div class="flex-container"
+               fxFill
+               fxLayout="row"
+               fxLayoutAlign="space-between center">
+            <div fxFlex>
+              {{ feature.text }}
+            </div>
+            <div>
+              {{ feature.value === true ? 'icon' : product[feature.value] }}
+            </div>
+          </div>
+       </md-list-item>
+     </md-list>
+    </md-card-content>
+    <md-card-actions class="flex-container" fxLayout="row">
+      <button md-raised-button color="primary" fxFlex>¡LO QUIERO!</button>
+    </md-card-actions>
+  </md-card>
+</div>
