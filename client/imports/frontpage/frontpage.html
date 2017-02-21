@@ -27,7 +27,8 @@
               {{ feature.text }}
             </div>
             <div>
-              {{ feature.value === true ? 'icon' : product[feature.value] }}
+              <md-icon color="accent" *ngIf="feature.value === true">check_circle</md-icon>
+              <span *ngIf="feature.value !== true">{{ product[feature.value] }}</span>
             </div>
           </div>
        </md-list-item>
