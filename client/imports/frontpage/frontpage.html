@@ -19,10 +19,13 @@
   <md-card *ngFor="let product of products" class="product">
     <md-card-content>
       <h2>{{ product.title }}</h2>
-      <div md-card-avatar class="example-header-image"></div>
+
       <img src="/images/caja_1.png">
+
       <div class="product-price"><span class="product-price-quantity">{{ product.prize }}</span>€</div>
+
       <md-divider></md-divider>
+      
       <md-list>
         <md-list-item *ngFor="let feature of features">
           <div class="flex-container"
