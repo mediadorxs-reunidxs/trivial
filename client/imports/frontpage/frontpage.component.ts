@@ -38,7 +38,7 @@ export class FrontpageComponent {
       box: 'total',
       board: 'personalizado',
       questions: "ilimitadas",
-      participants: "ilimitadas"
+      participants: "ilimitados"
     }
   ];
 
@@ -72,4 +72,11 @@ export class FrontpageComponent {
       value: 'participants'
     }
   ]
+
+  topFeatures = {
+    box: 'total',
+    board: 'personalizado',
+    questions: 'ilimitadas',
+    participants: 'ilimitados'
+  }
 }

@@ -34,7 +34,7 @@
             </div>
             <div>
               <md-icon color="accent" *ngIf="feature.value === true">check_circle</md-icon>
-              <span *ngIf="feature.value !== true">{{ product[feature.value] }}</span>
+              <span class="feature-value" *ngIf="feature.value !== true" [ngClass]="{ 'accent': product[feature.value] === topFeatures[feature.value]}">{{ product[feature.value] }}</span>
             </div>
           </div>
        </md-list-item>
