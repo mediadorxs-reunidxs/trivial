@@ -2,12 +2,61 @@ frontpage {
   .header {
     font-family: "Roboto Slab";
     color: white;
-    background-color: #5298a2;
+    background: #1C5063 url("/images/header.png") no-repeat center center;
+    height: 632px;
     h1 {
       font-size: 36px;
     }
     h2 {
       font-size: 18px;
     }
+  }
+
+  .header-down {
+    text-align: center;
+  }
+
+  .products {
+    margin: 0 30px;
+  }
+
+  .product {
+    margin: 0 20px;
+    h2 {
+      text-align: center;
+      font-family: "Roboto Slab";
+      font-size: 24px;
+      font-weight: bold;
+      color: $trivial-color-primary;
+    }
+
+    .mat-list {
+      .mat-list-item {
+        color: $trivial-color-blue-grey;
+        .mat-list-item-content {
+          padding: 0px;
+        }
+      }
+    }
+
+    .product-price {
+      text-align: center;
+      color: $trivial-color-accent;
+      font-size: 26px;
+      font-weight: 300;
+      .product-price-quantity {
+        font-size: 72px;
+      }
+    }
+
+    button {
+      font-weight: bold;
+      font-size: 20px;
+      height: 50px;
+    }
+  }
+
+  .footer {
+    text-align: center;
   }
 }

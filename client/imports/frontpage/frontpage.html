@@ -1,24 +1,27 @@
 <div class="flex-container header"
      fxLayout="column"
-     fxLayoutAlign="start center">
+     fxLayoutAlign="space-around center">
   <h1>El regalo colectivo que estábais esperando</h1>
 
-  <h2>Elige el plan perfecto para tu grupo y ¡a jugar!</h2>
+  <img src="/images/logo.png" alt="Trival Logo">
 
+  <div class="header-down">
+    <h2>Elige el plan perfecto para tu grupo y ¡a jugar!</h2>
+
+    <md-icon>arrow_drop_down_circle</md-icon>
+  </div>
 </div>
 
 <div class="flex-container products"
      fxLayout="row"
      fxLayoutAlign="center center">
-  <md-card *ngFor="let product of products">
-    <md-card-header>
-      <md-card-title>{{ product.title }}</md-card-title>
-      <div md-card-avatar class="example-header-image"></div>
-      <img md-card-image src="assets/img/examples/shiba2.jpg">
-      <md-card-subtitle>{{ product.prize }}€</md-card-subtitle>
-    </md-card-header>
-    <md-divider></md-divider>
+  <md-card *ngFor="let product of products" class="product">
     <md-card-content>
+      <h2>{{ product.title }}</h2>
+      <div md-card-avatar class="example-header-image"></div>
+      <img md-card-image src="/images/caja_1.png">
+      <div class="product-price"><span class="product-price-quantity">{{ product.prize }}</span>€</div>
+      <md-divider></md-divider>
       <md-list>
         <md-list-item *ngFor="let feature of features">
           <div class="flex-container"
@@ -40,4 +43,8 @@
       <button md-raised-button color="primary" fxFlex>¡LO QUIERO!</button>
     </md-card-actions>
   </md-card>
+</div>
+
+<div class="footer">
+  <img src="/images/footer.png" alt="Footer">
 </div>

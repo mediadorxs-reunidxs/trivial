@@ -5,6 +5,10 @@
 // have to load a single css file for Angular Material in your app.
 @include mat-core();
 
+$trivial-color-primary: #5298a2;
+$trivial-color-accent: #cc2054;
+$trivial-color-blue-grey: #5b6f81;
+
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue.
