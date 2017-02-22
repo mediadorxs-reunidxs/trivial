@@ -52,16 +52,16 @@ export class FrontpageComponent {
       value: true
     },
     {
+      text: 'Fichas',
+      value: true
+    },
+    {
       text: 'Caja personalizada',
       value: 'box'
     },
     {
       text: 'Tablero',
       value: 'board'
-    },
-    {
-      text: 'Fichas',
-      value: true
     },
     {
       text: 'Preguntas',
