@@ -14,12 +14,13 @@
 
 <div class="flex-container products"
      fxLayout="row"
+     fxLayoutWrap
      fxLayoutAlign="center center">
   <md-card *ngFor="let product of products" class="product">
     <md-card-content>
       <h2>{{ product.title }}</h2>
       <div md-card-avatar class="example-header-image"></div>
-      <img md-card-image src="/images/caja_1.png">
+      <img src="/images/caja_1.png">
       <div class="product-price"><span class="product-price-quantity">{{ product.prize }}</span>€</div>
       <md-divider></md-divider>
       <md-list>
@@ -39,6 +40,9 @@
        </md-list-item>
      </md-list>
     </md-card-content>
+    <div class="action-tip">
+      Pulsa el botón si deseas que te avisemos cuando esté disponible
+    </div>
     <md-card-actions class="flex-container" fxLayout="row">
       <button md-raised-button color="primary" fxFlex>¡LO QUIERO!</button>
     </md-card-actions>

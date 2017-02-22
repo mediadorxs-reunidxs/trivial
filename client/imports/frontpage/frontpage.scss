@@ -1,11 +1,19 @@
 frontpage {
+  display: block;
+
   .header {
     font-family: "Roboto Slab";
     color: white;
     background: #1C5063 url("/images/header.png") no-repeat center center;
+    background-size: cover;
     height: 632px;
+    padding: 20px;
     h1 {
+      text-align: center;
       font-size: 36px;
+    }
+    img {
+      max-width: 100%;
     }
     h2 {
       font-size: 18px;
@@ -17,11 +25,19 @@ frontpage {
   }
 
   .products {
-    margin: 0 30px;
+    padding: 0 20px;
+    margin-top: 50px;
+    @media (min-width: 960px) and (max-width: 1399px) {
+      width: 900px;
+      margin-right: auto;
+      margin-left: auto;
+    }
   }
 
   .product {
-    margin: 0 20px;
+    margin: 10px 20px;
+    max-width: 268px;
+    padding: 16px;
     h2 {
       text-align: center;
       font-family: "Roboto Slab";
@@ -39,6 +55,11 @@ frontpage {
       }
     }
 
+    img {
+      width: 124%;
+      margin-left: -12%;
+    }
+
     .product-price {
       text-align: center;
       color: $trivial-color-accent;
@@ -49,14 +70,28 @@ frontpage {
       }
     }
 
+    .action-tip {
+      margin-top: 40px;
+      text-align: center;
+      font-size: 12px;
+      color: $trivial-color-blue-grey;
+      padding: 0 20px;
+    }
+
     button {
       font-weight: bold;
       font-size: 20px;
       height: 50px;
+      margin: 16px !important;
     }
   }
 
   .footer {
     text-align: center;
+    padding: 50px;
+    img {
+      width: 100%;
+      max-width: 1510px;
+    }
   }
 }
