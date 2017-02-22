@@ -28,13 +28,14 @@
           <div class="flex-container"
                fxFill
                fxLayout="row"
-               fxLayoutAlign="space-between center">
+               fxLayoutAlign="space-between start">
             <div fxFlex>
               {{ feature.text }}
             </div>
-            <div>
-              <md-icon color="accent" *ngIf="feature.value === true">check_circle</md-icon>
+            <div fxLayout="row"
+                 fxLayoutAlign="end center">
               <span class="feature-value" *ngIf="feature.value !== true" [ngClass]="{ 'accent': product[feature.value] === topFeatures[feature.value]}">{{ product[feature.value] }}</span>
+              <md-icon color="{{ feature.value === true || product[feature.value] === topFeatures[feature.value] ? 'accent' : 'default' }}">check_circle</md-icon>
             </div>
           </div>
        </md-list-item>

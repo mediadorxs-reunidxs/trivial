@@ -70,6 +70,10 @@ frontpage {
       }
     }
 
+    .feature-value {
+      padding-right: 10px;
+    }
+
     .feature-value.accent {
       color: mat-color($trivial-accent);
     }
