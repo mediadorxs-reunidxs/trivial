@@ -1,0 +1,16 @@
+<div class="flex-layout"
+     fxLayout="column">
+  <div class="flex-layout"
+        fxLayout="row"
+        *ngFor="let answer of answers | async">
+    <div class="product">
+      {{ answer.product }}
+    </div>
+    <div class="email">
+      {{ answer.email }}
+    </div>
+    <div class="comments">
+      {{ answer.comments }}
+    </div>
+  </div>
+</div>

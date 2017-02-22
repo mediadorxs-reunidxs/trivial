@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { MeteorObservable } from 'meteor-rxjs';
+
+import { FrontpageAnswers } from '../../../imports/collections/frontpage-answers';
 
 import template from "./frontpage.html";
 
@@ -7,6 +10,8 @@ import template from "./frontpage.html";
   template
 })
 export class FrontpageComponent {
+  chosen;
+
   products = [
     {
       title: 'Básico',
@@ -78,5 +83,19 @@ export class FrontpageComponent {
     board: 'personalizado',
     questions: 'ilimitadas',
     participants: 'ilimitados'
+  }
+
+  choose(product): void {
+    MeteorObservable.call('choose', product).subscribe({
+      next: () => {
+        this.chosen = product;
+      },
+      error: (e: Error) => {
+        console.error(e);
+
+        alert(e);
+
+      }
+    })
   }
 }

@@ -25,7 +25,7 @@
       <div class="product-price"><span class="product-price-quantity">{{ product.prize }}</span>€</div>
 
       <md-divider></md-divider>
-      
+
       <md-list>
         <md-list-item *ngFor="let feature of features">
           <div class="flex-container"
@@ -48,7 +48,11 @@
       Pulsa el botón si deseas que te avisemos cuando esté disponible
     </div>
     <md-card-actions class="flex-container" fxLayout="row">
-      <button md-raised-button color="primary" fxFlex>¡LO QUIERO!</button>
+      <button md-raised-button
+              color="primary"
+              disabled="{{ chosen !== undefined }}"
+              fxFlex
+              (click)="choose(product.title)">¡LO QUIERO!</button>
     </md-card-actions>
   </md-card>
 </div>

@@ -8,9 +8,11 @@ import { Angulartics2Module, Angulartics2GoogleAnalytics } from 'angulartics2';
 
 import { Trivial } from './app.component';
 import { FrontpageComponent } from '../frontpage/frontpage.component';
+import { FrontpageAnswersComponent } from '../frontpage/frontpage-answers.component';
 
 const ROUTES: Routes = [
   { path: '', component: FrontpageComponent },
+  { path: 'frontpage/answers', component: FrontpageAnswersComponent }
 ];
 
 @NgModule({
@@ -23,7 +25,8 @@ const ROUTES: Routes = [
   ],
   declarations: [
     Trivial,
-    FrontpageComponent
+    FrontpageComponent,
+    FrontpageAnswersComponent
   ],
   entryComponents: [
     Trivial
