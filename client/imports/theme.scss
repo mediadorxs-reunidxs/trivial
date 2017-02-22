@@ -86,16 +86,16 @@ $mat-trivial-accent: (
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue.
-$trivial-app-primary: mat-palette($mat-trivial-primary);
-$trivial-app-accent:  mat-palette($mat-trivial-accent);
+$trivial-primary: mat-palette($mat-trivial-primary);
+$trivial-accent:  mat-palette($mat-trivial-accent);
 
 // The warn palette is optional (defaults to red).
-$trivial-app-warn:    mat-palette($mat-red);
+$trivial-warn:    mat-palette($mat-red);
 
 // Create the theme object (a Sass map containing all of the palettes).
-$trivial-app-theme: mat-light-theme($trivial-app-primary, $trivial-app-accent, $trivial-app-warn);
+$trivial-theme: mat-light-theme($trivial-primary, $trivial-accent, $trivial-warn);
 
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
-@include angular-material-theme($trivial-app-theme);
+@include angular-material-theme($trivial-theme);

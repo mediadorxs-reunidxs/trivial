@@ -43,7 +43,7 @@ frontpage {
       font-family: "Roboto Slab";
       font-size: 24px;
       font-weight: bold;
-      color: $trivial-color-primary;
+      color: mat-color($trivial-primary);
     }
 
     .mat-list {
@@ -62,7 +62,7 @@ frontpage {
 
     .product-price {
       text-align: center;
-      color: $trivial-color-accent;
+      color: mat-color($trivial-accent);
       font-size: 26px;
       font-weight: 300;
       .product-price-quantity {
@@ -71,7 +71,7 @@ frontpage {
     }
 
     .feature-value.accent {
-      color: $trivial-color-accent;
+      color: mat-color($trivial-accent);
     }
 
     .action-tip {
@@ -102,7 +102,7 @@ frontpage {
       text-align: center;
       font-family: "Roboto Slab";
       font-size: 24px;
-      color: $trivial-color-primary;
+      color: mat-color($trivial-primary);
     }
 
     .feedback-action {
