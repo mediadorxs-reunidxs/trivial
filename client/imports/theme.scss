@@ -9,11 +9,79 @@ $trivial-color-primary: #5298a2;
 $trivial-color-accent: #cc2054;
 $trivial-color-blue-grey: #5b6f81;
 
+$mat-trivial-primary: (
+    50 : #eaf3f4,
+    100 : #cbe0e3,
+    200 : #a9ccd1,
+    300 : #86b7be,
+    400 : #6ca7b0,
+    500 : #5298a2,
+    600 : #4b909a,
+    700 : #418590,
+    800 : #387b86,
+    900 : #286a75,
+    A100 : #b9f4ff,
+    A200 : #86ecff,
+    A400 : #53e4ff,
+    A700 : #3ae0ff,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
+$mat-trivial-accent (
+    50 : #f9e4ea,
+    100 : #f0bccc,
+    200 : #e690aa,
+    300 : #db6387,
+    400 : #d4416e,
+    500 : #cc2054,
+    600 : #c71c4d,
+    700 : #c01843,
+    800 : #b9133a,
+    900 : #ad0b29,
+    A100 : #ffdae0,
+    A200 : #ffa7b4,
+    A400 : #ff7488,
+    A700 : #ff5b73,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #ffffff,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
+
+
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue.
-$trivial-app-primary: mat-palette($mat-teal);
-$trivial-app-accent:  mat-palette($mat-pink, A200, A100, A400);
+$trivial-app-primary: mat-palette($mat-trivial-primary);
+$trivial-app-accent:  mat-palette($mat-trivial-accent);
 
 // The warn palette is optional (defaults to red).
 $trivial-app-warn:    mat-palette($mat-red);
