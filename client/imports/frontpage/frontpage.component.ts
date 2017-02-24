@@ -86,7 +86,7 @@ export class FrontpageComponent {
   }
 
   choose(product): void {
-    MeteorObservable.call('choose', product).subscribe({
+    MeteorObservable.call('choose', Meteor.default_connection._lastSessionId, product).subscribe({
       next: () => {
         this.chosen = product;
       },

@@ -3,6 +3,9 @@
   <div class="flex-layout"
         fxLayout="row"
         *ngFor="let answer of answers | async">
+    <div class="session-id">
+      {{ answer.sessionId }}
+    </div>
     <div class="product">
       {{ answer.product }}
     </div>
