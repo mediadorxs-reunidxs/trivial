@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { FrontpageAnswers } from '../../../imports/collections/frontpage-answers';
+import { FrontpageChoices, FrontpageFeedbacks } from '../../../imports/collections/frontpage';
 
 import template from "./frontpage-answers.html";
 
@@ -10,10 +10,12 @@ import template from "./frontpage-answers.html";
 })
 export class FrontpageAnswersComponent implements OnInit {
 
-  answers;
+  choices;
+  feedbacks;
 
   ngOnInit() {
-    this.answers = FrontpageAnswers.find({});
+    this.choices = FrontpageChoices.find({});
+    this.feedbacks = FrontpageFeedbacks.find({});
   }
 
 

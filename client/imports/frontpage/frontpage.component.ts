@@ -1,8 +1,6 @@
 import { Component } from '@angular/core';
 import { MeteorObservable } from 'meteor-rxjs';
 
-import { FrontpageAnswers } from '../../../imports/collections/frontpage-answers';
-
 import template from "./frontpage.html";
 
 @Component({
@@ -11,6 +9,8 @@ import template from "./frontpage.html";
 })
 export class FrontpageComponent {
   chosen;
+  email: string = '';
+  comments: string = '';
 
   products = [
     {
@@ -97,5 +97,21 @@ export class FrontpageComponent {
 
       }
     })
+  }
+
+  sendFeedback(): void {
+    MeteorObservable.call('feedback', Meteor.default_connection._lastSessionId, this.email, this.comments).subscribe({
+      next: () => {
+        this.email = '';
+        this.comments = '';
+      },
+      error: (e: Error) => {
+        console.error(e);
+
+        alert(e);
+      }
+    })
+
+    this.email = '';
   }
 }

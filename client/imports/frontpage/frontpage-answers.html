@@ -1,19 +1,36 @@
 <div class="flex-layout"
-     fxLayout="column">
+     fxLayout="row">
+
   <div class="flex-layout"
-        fxLayout="row"
-        *ngFor="let answer of answers | async">
-    <div class="session-id">
-      {{ answer.sessionId }}
+       fxLayout="column"
+       fxFlex="30">
+    <div class="flex-layout"
+          fxLayout="row"
+          *ngFor="let choice of choices | async">
+      <div fxFlex="50" class="session-id">
+        {{ choice.sessionId }}
+      </div>
+      <div fxFlex="50" class="product">
+        {{ choice.product }}
+      </div>
     </div>
-    <div class="product">
-      {{ answer.product }}
-    </div>
-    <div class="email">
-      {{ answer.email }}
-    </div>
-    <div class="comments">
-      {{ answer.comments }}
+  </div>
+
+  <div class="flex-layout"
+       fxLayout="column"
+       fxFlex="70">
+    <div class="flex-layout"
+          fxLayout="row"
+          *ngFor="let feedback of feedbacks | async">
+      <div fxFlex="20" class="session-id">
+        {{ feedback.sessionId }}
+      </div>
+      <div fxFlex="30" class="email">
+        {{ feedback.email }}
+      </div>
+      <div fxFlex="50" class="comments">
+        {{ feedback.comments }}
+      </div>
     </div>
   </div>
 </div>

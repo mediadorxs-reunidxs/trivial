@@ -66,15 +66,15 @@
   <form class="flex-container feedback-form"
         fxLayout="column">
     <md-input-container>
-      <input mdInput placeholder="email (opcional)">
+      <input mdInput placeholder="email (opcional)" [(ngModel)]="email" name="email" type="email">
     </md-input-container>
 
     <md-input-container>
-      <textarea mdInput placeholder="escribe aquí tus comentarios"></textarea>
+      <textarea mdInput placeholder="escribe aquí tus comentarios" [(ngModel)]="comments" name="comments"></textarea>
     </md-input-container>
 
     <div class="feedback-action">
-      <button md-raised-button color="primary">ENVIAR</button>
+      <button md-raised-button color="primary" (click)="sendFeedback()">ENVIAR</button>
     </div>
   </form>
 

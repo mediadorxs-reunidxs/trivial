@@ -1,6 +1,10 @@
-export interface FrontpageAnswer {
+export interface FrontpageChoice {
   sessionId: string,
-  product?: string,
+  product: string
+}
+
+export interface FrontpageFeedback {
+  sessionId: string,
   email?: string,
   comments?: string
 }
