@@ -49,6 +49,10 @@
     </div>
     <md-card-actions class="flex-container" fxLayout="row">
       <button md-raised-button
+              angulartics2On="click"
+              angularticsEvent="Choose"
+              angularticsCategory="Frontpage"
+              [angularticsProperties]="{ label: product.title, value: product.prize }"
               color="primary"
               disabled="{{ chosen !== undefined }}"
               fxFlex
