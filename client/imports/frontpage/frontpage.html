@@ -74,7 +74,13 @@
     </md-input-container>
 
     <div class="feedback-action">
-      <button md-raised-button color="primary" (click)="sendFeedback()">ENVIAR</button>
+      <button md-raised-button
+              color="primary"
+              angulartics2On="click"
+              angularticsEvent="Feedback"
+              angularticsCategory="Frontpage"
+              [angularticsProperties]="{ label: chosen }"
+              (click)="sendFeedback()">ENVIAR</button>
     </div>
   </form>
 
