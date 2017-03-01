@@ -11,6 +11,7 @@ export class FrontpageComponent {
   chosen;
   email: string = '';
   comments: string = '';
+  sentFeedback: boolean = false;
 
   products = [
     {
@@ -102,8 +103,7 @@ export class FrontpageComponent {
   sendFeedback(): void {
     MeteorObservable.call('feedback', Meteor['connection']._lastSessionId, this.email, this.comments).subscribe({
       next: () => {
-        this.email = '';
-        this.comments = '';
+        this.sentFeedback = true;
       },
       error: (e: Error) => {
         console.error(e);
@@ -111,7 +111,11 @@ export class FrontpageComponent {
         alert(e);
       }
     })
+  }
 
+  resetFeedback(): void {
     this.email = '';
+    this.comments = '';
+    this.sentFeedback = false;
   }
 }

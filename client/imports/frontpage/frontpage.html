@@ -14,7 +14,7 @@
 
 <div class="explanation"
      fxLayout="column">
- <div class="row-1" 
+ <div class="row-1"
       fxLayout.gt-sm="row"
       fxLayout="column"
       fxLayoutAlign.gt-sm="space-around center">
@@ -132,27 +132,42 @@
 </div>
 
 <div class="feedback">
-  <h2>¿No quieres ninguno? Ayúdanos a mejorar enviando tus comentarios</h2>
-  <form class="flex-container feedback-form"
-        fxLayout="column">
-    <md-input-container>
-      <input mdInput placeholder="email (opcional)" [(ngModel)]="email" name="email" type="email">
-    </md-input-container>
+  <div class="form" *ngIf="! sentFeedback">
+    <h2>¿Tienes alguna duda? Escríbenos para ver si podemos ayudarte</h2>
+    <form class="flex-container feedback-form"
+          fxLayout="column">
+      <md-input-container>
+        <input mdInput placeholder="email (opcional)" [(ngModel)]="email" name="email" type="email">
+      </md-input-container>
 
-    <md-input-container>
-      <textarea mdInput placeholder="escribe aquí tus comentarios" [(ngModel)]="comments" name="comments"></textarea>
-    </md-input-container>
+      <md-input-container>
+        <textarea mdInput placeholder="escribe aquí tus comentarios" [(ngModel)]="comments" name="comments"></textarea>
+      </md-input-container>
+
+      <div class="feedback-action">
+        <button md-raised-button
+                color="primary"
+                angulartics2On="click"
+                angularticsEvent="Feedback"
+                angularticsCategory="Frontpage"
+                [angularticsProperties]="{ label: chosen }"
+                (click)="sendFeedback()">ENVIAR</button>
+      </div>
+    </form>
+  </div>
+
+  <div class="thanks" *ngIf="sentFeedback">
+    <h2>Gracias por los comentarios</h2>
+    <div *ngIf="email != ''">
+      En breve nos pondremos en contacto contigo
+    </div>
 
     <div class="feedback-action">
       <button md-raised-button
               color="primary"
-              angulartics2On="click"
-              angularticsEvent="Feedback"
-              angularticsCategory="Frontpage"
-              [angularticsProperties]="{ label: chosen }"
-              (click)="sendFeedback()">ENVIAR</button>
+              (click)="resetFeedback()">VOLVER</button>
     </div>
-  </form>
+  </div>
 
 </div>
 
