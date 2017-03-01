@@ -127,7 +127,7 @@
               color="primary"
               disabled="{{ chosen !== undefined }}"
               fxFlex
-              (click)="choose(product.title)">¡LO QUIERO!</button>
+              (click)="choose(product.title)">{{ chosen === product.title ? '¡CHACHI!' : '¡LO QUIERO!'}}</button>
     </md-card-actions>
   </md-card>
 </div>
