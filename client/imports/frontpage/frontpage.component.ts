@@ -51,30 +51,37 @@ export class FrontpageComponent {
   features = [
     {
       text: 'Trivial con vuestras preguntas',
+      tooltip: 'Un trivial cuyas preguntas las diseñáis entre el grupo de amigos',
       value: true
     },
     {
       text: 'Tarjetas personalizadas',
+      tooltip: 'Las tarjetas del trivial están personalizadas, con vuestras preguntas y la imágen que queráis',
       value: true
     },
     {
       text: 'Fichas',
+      tooltip: 'Fichas para jugar al trivial',
       value: true
     },
     {
       text: 'Caja personalizada',
+      tooltip: 'La caja puede llevar personalización básica, con una pequeña foto, o totalmente personalizada con las imágenes que queráis',
       value: 'box'
     },
     {
       text: 'Tablero',
+      tooltip: 'El tablero del trivial puede ser estándar, o totalmente personalizado con la imagen que queráis',
       value: 'board'
     },
     {
       text: 'Preguntas',
+      tooltip: 'El número máximo de preguntas que llevará el trivial',
       value: 'questions'
     },
     {
-      text: 'Participantes',
+      text: 'Creadores del juego',
+      tooltip: 'El número máximo de personas que pueden participar haciendo preguntas',
       value: 'participants'
     }
   ]

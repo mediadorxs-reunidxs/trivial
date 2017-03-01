@@ -99,6 +99,7 @@
       <md-list>
         <md-list-item *ngFor="let feature of features">
           <div class="flex-container"
+               mdTooltip="{{ feature.tooltip }}"
                fxFill
                fxLayout="row"
                fxLayoutAlign="space-between start">
