@@ -86,7 +86,7 @@ export class FrontpageComponent {
   }
 
   choose(product): void {
-    MeteorObservable.call('choose', Meteor.default_connection._lastSessionId, product).subscribe({
+    MeteorObservable.call('choose', Meteor['connection']._lastSessionId, product).subscribe({
       next: () => {
         this.chosen = product;
       },
@@ -100,7 +100,7 @@ export class FrontpageComponent {
   }
 
   sendFeedback(): void {
-    MeteorObservable.call('feedback', Meteor.default_connection._lastSessionId, this.email, this.comments).subscribe({
+    MeteorObservable.call('feedback', Meteor['connection']._lastSessionId, this.email, this.comments).subscribe({
       next: () => {
         this.email = '';
         this.comments = '';

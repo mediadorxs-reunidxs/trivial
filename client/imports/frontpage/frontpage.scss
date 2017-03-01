@@ -24,9 +24,63 @@ frontpage {
     text-align: center;
   }
 
+  .explanation {
+    padding: 16px;
+    max-width: 1356px;
+    margin: 56px auto 30px auto;
+
+    h2 {
+      color: mat-color($trivial-primary);
+      text-transform: uppercase;
+      font-size: 24px;
+      font-weight: bold;
+      font-family: "Roboto Slab";
+      &:not(:first-child) {
+        margin-top: 42px;
+      }
+    }
+    p {
+      color: $trivial-color-blue-grey;
+      font-size: 16px;
+
+    }
+
+    .people, .board {
+      text-align: center;
+      img {
+        max-width: 300px;
+      }
+    }
+
+    @media (min-width: 960px) {
+      .row-2 {
+        margin-top: 70px;
+      }
+    }
+
+    .steps {
+      margin-top: 56px;
+    }
+
+    .steps, .people, .board {
+      img {
+        width: 100%;
+      }
+    }
+
+    .play-message {
+      font-family: "Roboto Slab";
+      font-size: 18px;
+      font-weight: bold;
+      text-align: center;
+      color: mat-color($trivial-accent);
+      margin-top: 30px;
+    }
+  }
+
   .products {
     padding: 0 20px;
-    margin-top: 50px;
+    margin-top: 30px;
     @media (min-width: 960px) and (max-width: 1399px) {
       width: 900px;
       margin-right: auto;
@@ -126,10 +180,12 @@ frontpage {
 
   .footer {
     text-align: center;
-    padding: 50px;
+    padding: 16px;
+    max-width: 1356px;
+    margin-right: auto;
+    margin-left: auto;
     img {
       width: 100%;
-      max-width: 1510px;
     }
   }
 }
