@@ -18,7 +18,7 @@ export class FrontpageComponent {
       title: 'Básico',
       prize: 50,
       box: 'básica',
-      board: 'estándar',
+      board: 'básico',
       questions: 200,
       participants: 10
     },
@@ -26,14 +26,14 @@ export class FrontpageComponent {
       title: 'Standard',
       prize: 70,
       box: 'básica',
-      board: 'estándar',
+      board: 'básico',
       questions: 300,
       participants: 15
     },
     {
       title: 'Avanzado',
       prize: 90,
-      box: 'total',
+      box: 'personalizada',
       board: 'personalizado',
       questions: 300,
       participants: 15
@@ -41,7 +41,7 @@ export class FrontpageComponent {
     {
       title: 'Super Pro',
       prize: 110,
-      box: 'total',
+      box: 'personalizada',
       board: 'personalizado',
       questions: "ilimitadas",
       participants: "ilimitados"
@@ -65,13 +65,13 @@ export class FrontpageComponent {
       value: true
     },
     {
-      text: 'Caja personalizada',
-      tooltip: 'La caja puede llevar personalización básica, con una pequeña foto, o totalmente personalizada con las imágenes que queráis',
+      text: 'Caja',
+      tooltip: 'La caja puede llevar personalización básica, con una pequeña foto, o totalmente personalizada con el diseño que queráis',
       value: 'box'
     },
     {
       text: 'Tablero',
-      tooltip: 'El tablero del trivial puede ser estándar, o totalmente personalizado con la imagen que queráis',
+      tooltip: 'El tablero del trivial puede ser básico, o totalmente personalizado con el diseño que queráis',
       value: 'board'
     },
     {
@@ -87,7 +87,7 @@ export class FrontpageComponent {
   ]
 
   topFeatures = {
-    box: 'total',
+    box: 'personalizada',
     board: 'personalizado',
     questions: 'ilimitadas',
     participants: 'ilimitados'
