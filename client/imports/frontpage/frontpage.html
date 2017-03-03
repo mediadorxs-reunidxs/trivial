@@ -138,7 +138,7 @@
     <form class="flex-container feedback-form"
           fxLayout="column">
       <md-input-container>
-        <input mdInput placeholder="email (opcional)" [(ngModel)]="email" name="email" type="email">
+        <input #emailInput mdInput placeholder="email (opcional)" [(ngModel)]="email" name="email" type="email">
       </md-input-container>
 
       <md-input-container>

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { MeteorObservable } from 'meteor-rxjs';
 
 import template from "./frontpage.html";
@@ -8,6 +8,8 @@ import template from "./frontpage.html";
   template
 })
 export class FrontpageComponent {
+  @ViewChild('emailInput') emailInput;
+
   chosen;
   email: string = '';
   comments: string = '';
@@ -97,6 +99,8 @@ export class FrontpageComponent {
     MeteorObservable.call('choose', Meteor['connection']._lastSessionId, product).subscribe({
       next: () => {
         this.chosen = product;
+
+        this.emailInput.nativeElement.focus();
       },
       error: (e: Error) => {
         console.error(e);
