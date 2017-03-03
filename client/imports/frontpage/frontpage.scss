@@ -1,6 +1,11 @@
 frontpage {
   display: block;
 
+
+  button:hover {
+    background-color: #6CBDC8 !important;
+  }
+
   .header {
     font-family: "Roboto Slab";
     color: white;
@@ -139,6 +144,7 @@ frontpage {
     .mat-icon.mat-middle {
       color: #F6A623;
     }
+
 
     .action-tip {
       margin-top: 40px;
