@@ -109,7 +109,7 @@
             <div fxLayout="row"
                  fxLayoutAlign="end center">
               <span class="feature-value" *ngIf="feature.value !== true" [ngClass]="{ 'accent': product[feature.value] === topFeatures[feature.value]}">{{ product[feature.value] }}</span>
-              <md-icon color="{{ feature.value === true || product[feature.value] === topFeatures[feature.value] ? 'accent' : 'default' }}">check_circle</md-icon>
+              <md-icon color="{{ feature.value === true || product[feature.value] === topFeatures[feature.value] ? 'accent' : ( product[feature.value] === midFeatures[feature.value] ? 'middle' : 'default' ) }}">check_circle</md-icon>
             </div>
           </div>
        </md-list-item>

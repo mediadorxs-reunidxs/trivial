@@ -95,6 +95,11 @@ export class FrontpageComponent {
     participants: 'ilimitados'
   }
 
+  midFeatures = {
+    questions: 300,
+    participants: 15
+  }
+
   choose(product): void {
     MeteorObservable.call('choose', Meteor['connection']._lastSessionId, product).subscribe({
       next: () => {
