@@ -82,7 +82,7 @@ export class FrontpageComponent {
       value: 'questions'
     },
     {
-      text: 'Creadores del juego',
+      text: 'Creadores de preguntas',
       tooltip: 'El número máximo de personas que pueden participar haciendo preguntas',
       value: 'participants'
     }
