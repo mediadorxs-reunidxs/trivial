@@ -3,16 +3,31 @@
      fxLayoutAlign="space-around center">
   <h1>El juego de vuestras anécdotas</h1>
 
-  <img src="/images/logo.png" alt="Trival Logo">
+  <a href="#explanation"
+     pageScroll
+     angulartics2On="click"
+     angularticsEvent="Click"
+     angularticsCategory="Frontpage"
+     [angularticsProperties]="{ label: 'Logo' }">
+    <img src="/images/logo.png" alt="Trival Logo" />
+  </a>
 
   <div class="header-down">
     <h2>Formulad vuestras preguntas, recibid el regalo y ¡a jugar!</h2>
 
-    <md-icon>arrow_drop_down_circle</md-icon>
+    <a href="#explanation"
+       pageScroll
+       angulartics2On="click"
+       angularticsEvent="Click"
+       angularticsCategory="Frontpage"
+       [angularticsProperties]="{ label: 'Arrow icon' }">
+      <md-icon>arrow_drop_down_circle</md-icon>
+    </a>
   </div>
 </div>
 
 <div class="explanation"
+     id="explanation"
      fxLayout="column">
  <div class="row-1"
       fxLayout.gt-sm="row"

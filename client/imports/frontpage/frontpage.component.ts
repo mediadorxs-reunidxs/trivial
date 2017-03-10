@@ -100,6 +100,10 @@ export class FrontpageComponent {
     participants: 15
   }
 
+  scrollToExplanation(): void {
+    console.log('scroll');
+  }
+
   choose(product): void {
     MeteorObservable.call('choose', Meteor['connection']._lastSessionId, product).subscribe({
       next: () => {

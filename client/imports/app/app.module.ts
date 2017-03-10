@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
 import { MaterialModule } from '@angular/material';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import {Ng2PageScrollModule} from 'ng2-page-scroll';
 import { Angulartics2Module, Angulartics2GoogleAnalytics } from 'angulartics2';
 
 import { Trivial } from './app.component';
@@ -23,6 +24,7 @@ const ROUTES: Routes = [
     MaterialModule,
     FlexLayoutModule,
     RouterModule.forRoot(ROUTES),
+    Ng2PageScrollModule.forRoot(),
     Angulartics2Module.forRoot([ Angulartics2GoogleAnalytics ])
   ],
   declarations: [

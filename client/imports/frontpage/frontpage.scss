@@ -27,6 +27,9 @@ frontpage {
 
   .header-down {
     text-align: center;
+    a {
+      color: inherit !important;
+    }
   }
 
   .explanation {
