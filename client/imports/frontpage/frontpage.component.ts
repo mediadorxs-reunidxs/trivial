@@ -68,7 +68,7 @@ export class FrontpageComponent {
     },
     {
       text: 'Caja',
-      tooltip: 'La caja puede llevar personalización básica, con una pequeña foto, o totalmente personalizada con el diseño que queráis',
+      tooltip: 'La caja puede ser básica, con una pequeña foto, o personalizada con el diseño que queráis',
       value: 'box'
     },
     {
@@ -83,7 +83,7 @@ export class FrontpageComponent {
     },
     {
       text: 'Creadores de preguntas',
-      tooltip: 'El número máximo de personas que pueden participar haciendo preguntas',
+      tooltip: 'El número máximo de personas que participan definiendo las preguntas en la plataforma. Cada pregunta en la tarjeta impresa lleva el nombre de quien la creó.',
       value: 'participants'
     }
   ]
