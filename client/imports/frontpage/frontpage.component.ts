@@ -18,7 +18,7 @@ export class FrontpageComponent {
   products = [
     {
       title: 'Básico',
-      prize: 50,
+      price: 50,
       box: 'básica',
       board: 'básico',
       questions: 200,
@@ -26,7 +26,7 @@ export class FrontpageComponent {
     },
     {
       title: 'Standard',
-      prize: 70,
+      price: 70,
       box: 'básica',
       board: 'básico',
       questions: 300,
@@ -34,7 +34,7 @@ export class FrontpageComponent {
     },
     {
       title: 'Avanzado',
-      prize: 90,
+      price: 90,
       box: 'personalizada',
       board: 'personalizado',
       questions: 300,
@@ -42,7 +42,7 @@ export class FrontpageComponent {
     },
     {
       title: 'Super Pro',
-      prize: 110,
+      price: 110,
       box: 'personalizada',
       board: 'personalizado',
       questions: "ilimitadas",

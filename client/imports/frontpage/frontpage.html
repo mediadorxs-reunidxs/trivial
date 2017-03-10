@@ -92,7 +92,7 @@
 
       <img src="/images/caja_1.png">
 
-      <div class="product-price"><span class="product-price-quantity">{{ product.prize }}</span>€</div>
+      <div class="product-price"><span class="product-price-quantity">{{ product.price }}</span>€</div>
 
       <md-divider></md-divider>
 
@@ -123,7 +123,7 @@
               angulartics2On="click"
               angularticsEvent="Choose"
               angularticsCategory="Frontpage"
-              [angularticsProperties]="{ label: product.title, value: product.prize }"
+              [angularticsProperties]="{ label: product.title, value: product.price }"
               color="primary"
               disabled="{{ chosen !== undefined }}"
               fxFlex
