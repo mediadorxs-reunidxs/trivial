@@ -1,5 +1,6 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component, ViewChild, HostListener } from '@angular/core';
 import { MeteorObservable } from 'meteor-rxjs';
+import { Angulartics2 } from 'angulartics2';
 
 import template from "./frontpage.html";
 
@@ -9,6 +10,45 @@ import template from "./frontpage.html";
 })
 export class FrontpageComponent {
   @ViewChild('emailInput') emailInput;
+
+  @HostListener('window:scroll', ['$event']) trackScroll() {
+    let el = this.getLastElement();
+
+    if (el !== this.currentLastElement) {
+      this.currentLastElement = el;
+
+      this.track(el);
+    }
+  }
+
+  toTrackElements = [
+    '.what',
+    '.why',
+    '.steps',
+    '.product-1',
+    '.product-2',
+    '.product-3',
+    '.product-4',
+    '.feedback'
+  ];
+
+  currentLastElement;
+
+  getLastElement() {
+    let last,
+        bottom = window.pageYOffset + window.innerHeight;
+
+    for (let element of this.toTrackElements) {
+      let htmlEl = document.querySelector(element);
+
+      if (bottom > htmlEl.offsetTop + htmlEl.offsetHeight) {
+        last = element;
+      }
+    }
+
+    return last;
+  }
+
 
   chosen;
   email: string = '';
@@ -98,6 +138,12 @@ export class FrontpageComponent {
   midFeatures = {
     questions: 300,
     participants: 15
+  }
+
+  constructor(private angulartics2: Angulartics2) {}
+
+  track(el) {
+    this.angulartics2.eventTrack.next({ action: 'View ' + el, properties: { category: 'Frontpage' }});
   }
 
   scrollToExplanation(): void {

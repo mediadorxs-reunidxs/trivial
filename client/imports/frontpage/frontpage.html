@@ -101,7 +101,7 @@
      fxLayout="row"
      fxLayoutWrap
      fxLayoutAlign="center center">
-  <md-card *ngFor="let product of products" class="product">
+  <md-card *ngFor="let product of products; let i = index" class="product" [ngClass]="'product-' + (i + 1)">
     <md-card-content>
       <h2>{{ product.title }}</h2>
 
